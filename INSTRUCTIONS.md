@@ -37,7 +37,8 @@ Travailler à la racine de ce dépôt (cloné en lecture seule).
    - HTML autorisé dans les textes : `<b>`, `<i>`, `<sup>`, `<p>`. Échapper les guillemets JSON.
 5. **PDF** : `python3 render.py data.json content.json "out/Brief Matinal - JOUR.pdf"` (créer `out/`).
    Contrôle : `pdfinfo` → 3 pages idéalement, 4 maximum (sinon raccourcir les textes et relancer).
-   Convertir la page 1 en PNG (`pdftoppm -r 60 -png -f 1 -l 1`) et la regarder : pas de chevauchement ni de colonne coupée.
+   Convertir **toutes les pages** en PNG (`pdftoppm -r 60 -png fichier.pdf out/p`) et les regarder une par une : pas de chevauchement,
+   de colonne ou de texte coupé, de tableau scindé maladroitement, de page presque vide. Corriger (raccourcir) et regénérer si besoin.
 6. **Dépôt Drive** : `python3 upload.py "out/Brief Matinal - JOUR.pdf"` avec les variables `BRIEF_UPLOAD_URL` et
    `BRIEF_UPLOAD_SECRET` fournies dans le message de la tâche planifiée. La réponse doit contenir `"ok":true`.
    En cas d'échec réseau, réessayer 2 fois (30 s d'intervalle). Un nouveau dépôt le même jour remplace l'ancien fichier.
@@ -49,5 +50,5 @@ Travailler à la racine de ce dépôt (cloné en lecture seule).
 - Les données de `data.json` font foi pour les cours ; les recherches servent à expliquer.
 - Week-ends et jours sans séance : utiliser la dernière clôture et le dire dans `data_note`.
 - Rester court : c'est un brief, pas un rapport.
-- Sobriété : viser 8 à 10 recherches web au total (lancées en parallèle par lots), ne regarder que la page 1 du PDF,
+- Sobriété : viser 8 à 10 recherches web au total (lancées en parallèle par lots), rendu basse résolution (60 dpi) pour le contrôle visuel,
   pas de relectures inutiles de fichiers. Le brief doit être prêt en 10–15 minutes.
