@@ -1,0 +1,5 @@
+out/
+data.json
+content.json
+*.html
+__pycache__/

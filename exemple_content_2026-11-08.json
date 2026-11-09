@@ -1,0 +1,74 @@
+{
+ "date": "2026-11-08",
+ "date_label": "Dimanche 8 novembre 2026",
+ "data_note": "Clôtures du vendredi 6 nov. · devises et bitcoin au 8 nov.",
+ "essentiel": [
+  "<b>Semaine très difficile pour la tech.</b> Les démocrates ont repris le Congrès aux élections de mi-mandat du 3 novembre, ce qui fait craindre une régulation plus stricte de l'IA et des data centers. Le Nasdaq a perdu 5,5 % jeudi, puis a rebondi de 1,1 % vendredi (−3,4 % sur la semaine). Tokyo a suivi : le Nikkei a chuté de 6 % vendredi et entre en <i>marché baissier</i>, à plus de 20 % sous son plus haut.",
+  "<b>Le pétrole a nettement reculé.</b> Le Brent a perdu 16 % sur la semaine, à 98 $, sa plus forte baisse depuis 2020. Les marchés misent sur un accord États-Unis–Iran : réouverture du détroit d'Ormuz contre une levée des sanctions. Il reste en hausse de plus de 60 % depuis janvier.",
+  "<b>Les banques centrales continuent de resserrer.</b> La Banque d'Angleterre a relevé son taux à 4 %, sa première hausse depuis 2023. Aux États-Unis, l'emploi d'octobre est fort (+165 000 postes) et une hausse de la Fed en décembre paraît très probable. La BCE garde son taux de dépôt à 2,50 %, et Christine Lagarde quittera la présidence le 7 février 2027.",
+  "<b>La France sous tension.</b> L'Assemblée a rejeté à l'unanimité la partie recettes du budget 2027, une première. L'OAT à 10 ans est à 4,77 %, avec un écart de 152 points de base avec le Bund allemand. La France emprunte désormais plus cher que l'Italie.",
+  "<b>À surveiller :</b> l'inflation américaine d'octobre, publiée mardi 10 novembre à 14h30, pèsera lourd dans la décision de la Fed en décembre."
+ ],
+ "actions_commentaire": "L'Europe a mieux résisté sur la semaine (CAC 40 +2,1 %), car la baisse a surtout touché les valeurs technologiques, peu présentes dans la cote parisienne. Depuis le 1<sup>er</sup> janvier, le CAC 40 est en revanche quasiment stable (−0,1 %), loin du S&P 500 (+7,8 %) et du MSCI World (+7,5 % en dollars) : le risque politique français pèse. Le VIX, l'« indice de la peur », est à 25,6. Au-dessus de 20, il signale un marché nerveux.",
+ "taux_commentaire": "Les taux longs restent élevés partout : les banques centrales remontent leurs taux pour contenir l'inflation liée à l'énergie. Le Royaume-Uni (5,16 %) et les États-Unis (4,87 %) sont en tête. Le chiffre clé pour un conseiller en France : avec un écart de 152 pb avec l'Allemagne, l'État français paie une prime de risque plus élevée que l'Italie. Voir la notion du jour.",
+ "autres_commentaire": "Le recul du pétrole est une bonne nouvelle pour l'inflation européenne, mais le gaz TTF reste très cher (environ 86 €/MWh, prix à la mi-octobre, dernière cotation disponible). L'or se maintient au-dessus de 4 000 $. Le dollar s'est renforcé vendredi après les chiffres de l'emploi : l'euro est retombé à 1,114 $.",
+ "banques_centrales": [
+  {"banque": "Fed (États-Unis)", "taux": "3,75–4,00 %", "derniere": "28 oct. : maintien après la hausse de septembre (vote 10–2, les deux opposants voulaient une hausse). Président : Kevin Warsh.", "prochaine": "8–9 déc.", "tendance": "↑ Hausse en décembre largement anticipée, renforcée par l'emploi"},
+  {"banque": "BCE (zone euro)", "taux": "2,50 % (dépôt)", "derniere": "29 oct. : maintien unanime après les hausses de juin et septembre. Refi 2,65 %. Lagarde partira le 7 février 2027.", "prochaine": "17 déc.", "tendance": "→ Pause prudente, décisions au cas par cas selon les données"},
+  {"banque": "BoE (Royaume-Uni)", "taux": "4,00 %", "derniere": "5 nov. : <b>+25 pb</b> (vote 8–1, C. Mann voulait +50 pb). Première hausse depuis 2023.", "prochaine": "17 déc.", "tendance": "↑ Resserrement face à l'inflation liée à l'énergie"},
+  {"banque": "BoJ (Japon)", "taux": "1,25 %", "derniere": "30 oct. : maintien (8–1) après la hausse de septembre, au plus haut depuis 31 ans.", "prochaine": "18 déc.", "tendance": "↑ M. Ueda laisse la porte ouverte à une hausse en décembre"},
+  {"banque": "BNS (Suisse)", "taux": "0,00 %", "derniere": "24 sept. : maintien, au même niveau depuis mi-2025.", "prochaine": "déc.", "tendance": "→ Statu quo, franc fort"},
+  {"banque": "PBoC (Chine)", "taux": "3,00 % (LPR 1 an)", "derniere": "Oct. : taux de référence inchangés pour le 17<sup>e</sup> mois (LPR 5 ans : 3,50 %).", "prochaine": "20 nov.", "tendance": "→ Stable, assouplissement possible (inflation très faible)"}
+ ],
+ "agenda": [
+  {"jour": "Lun. 9", "evenement": "États-Unis : anticipations d'inflation des ménages (Fed de New York). Semaine chargée en résultats d'entreprises : 169 sociétés américaines publient, dont Constellation Energy lundi."},
+  {"jour": "Mar. 10", "evenement": "<b>14h30 : inflation américaine (CPI) d'octobre</b>, le chiffre de la semaine. Un chiffre élevé confirmerait la hausse de la Fed en décembre."},
+  {"jour": "Mer. 11", "evenement": "Armistice : jour férié en France, mais <b>la Bourse de Paris reste ouverte</b>. Le marché obligataire américain est fermé (Veterans Day), Wall Street est ouverte."},
+  {"jour": "Jeu. 12", "evenement": "Résultats de Cisco et d'Applied Materials après la clôture américaine. Ce sera un test pour les valeurs liées à l'IA après la chute de la semaine."},
+  {"jour": "Ven. 13", "evenement": "Prix à la production américains (PPI). Le Sénat poursuit l'examen du budget de la Sécurité sociale (PLFSS 2027)."}
+ ],
+ "monde": [
+  {"theme": "États-Unis", "titre": "Les démocrates reprennent le Congrès", "texte": "Aux élections de mi-mandat du 3 novembre, les démocrates ont remporté la Chambre et le Sénat, selon les projections. Les marchés y voient un risque de régulation plus stricte de l'IA et des data centers, d'où la chute des semi-conducteurs (−12 % jeudi). Le gouvernement aura plus de mal à faire passer ses textes au Congrès."},
+  {"theme": "Moyen-Orient", "titre": "Des négociations États-Unis–Iran, sans accord", "texte": "Des discussions indirectes ont lieu sous médiation du Qatar. La piste évoquée : la réouverture du détroit d'Ormuz contre un allègement des sanctions, les questions nucléaires étant renvoyées à plus tard. Mais les attaques de pétroliers continuent, et le trafic à Ormuz reste inférieur à 60 % de la normale. Le risque d'un rebond du pétrole reste élevé."},
+  {"theme": "États-Unis", "titre": "Un marché de l'emploi plus solide que prévu", "texte": "L'économie a créé 165 000 emplois en octobre, contre environ 60 000 attendus, et le chômage recule à 4,1 %. C'est une bonne nouvelle pour l'activité, mais elle rend une hausse de taux en décembre plus probable. Les taux à 10 ans sont à 4,87 %."},
+  {"theme": "Japon", "titre": "Le Nikkei entre en marché baissier", "texte": "Le Nikkei a perdu 9 % sur la semaine, sa pire semaine depuis mars 2020. La baisse a été plus forte sur les valeurs liées aux semi-conducteurs (SoftBank −11 %, Kioxia −12 % vendredi). Le yen reste faible, à 158 pour un dollar."}
+ ],
+ "france": [
+  {"theme": "Budget", "titre": "Budget 2027 : un rejet historique des recettes", "texte": "Le 4 novembre, aucun député n'a voté la partie recettes du projet de loi de finances (458 voix contre), une première sous la V<sup>e</sup> République. Le texte part au Sénat. Le gouvernement Lecornu maintient sa ligne rouge, un déficit ramené à 5 % du PIB en 2027 (contre 5,4 % attendus en 2026), et pourrait recourir au 49.3, avec le risque d'une motion de censure."},
+  {"theme": "Social", "titre": "Forte mobilisation contre le budget", "texte": "L'intersyndicale (CFDT, CGT, FO, UNSA, FSU) a organisé une journée de grève le 5 novembre contre environ 43 Md€ d'économies, avec 700 000 à 800 000 manifestants selon les syndicats. Des manifestations européennes contre la vie chère sont annoncées du 20 au 22 novembre."},
+  {"theme": "Marchés", "titre": "La dette française plus chère que l'italienne", "texte": "Avec une OAT à 10 ans à 4,77 % contre 4,34 % pour l'Italie, l'État paie environ 43 pb de plus que Rome pour emprunter. Les incertitudes budgétaires entretiennent cette prime de risque, qui se répercute sur le coût du crédit pour les ménages et les entreprises."}
+ ],
+ "patrimoine": [
+  {"theme": "Fiscalité", "titre": "PLF 2027 : ce qui est sur la table", "texte": "Dans le texte du gouvernement, la <b>flat tax reste à 31,4 %</b> (12,8 % d'impôt + 18,6 % de prélèvements sociaux). Les amendements visant à la relever ont été rejetés en commission. Sur les donations, des amendements proposent de prolonger jusqu'au 31/12/2027 l'exonération temporaire des dons familiaux en numéraire, et de relever son plafond de 50 000 à 100 000 €. Le projet prévoit aussi d'encadrer certains contrats d'assurance-vie, avec des versements en numéraire et non en titres. <i>Rien n'est définitif avant la promulgation, attendue fin décembre.</i>"},
+  {"theme": "Épargne réglementée", "titre": "Livret A 1,70 %, LEP 2,50 %", "texte": "Ces taux s'appliquent jusqu'au 31 janvier 2027 (LDDS aligné sur le Livret A). La prochaine révision aura lieu le 1<sup>er</sup> février 2027. Avec la remontée de l'inflation et des taux de la BCE, plusieurs estimations envisagent un Livret A entre 2 et 2,4 %. Ce ne sont que des projections."},
+  {"theme": "Immobilier", "titre": "Les taux de crédit dépassent à nouveau les 3,7 % sur 20 ans", "texte": "Selon les courtiers (Pretto, Meilleurtaux, CAFPI), les taux moyens de novembre sont d'environ 3,4–3,6 % sur 15 ans, 3,6–3,8 % sur 20 ans et 3,75–3,85 % sur 25 ans. Ils remontent depuis septembre, dans le sillage des OAT. Les ménages aux revenus modestes dépassent 4 % sur 25 ans. Le taux d'usure est de 5,40 % (fixe, 20 ans et plus)."},
+  {"theme": "Placements", "titre": "Fonds euros en reprise, SCPI autour de 5 %", "texte": "La hausse des taux obligataires profite aux fonds euros : les estimations tablent sur environ 2,9 % en moyenne pour 2026, contre 2,6 % en 2025. La collecte en assurance-vie reste forte. Les SCPI de rendement affichent un taux de distribution d'environ 5 %, mais la remontée des taux pèse à nouveau sur la valeur des immeubles."},
+  {"theme": "Retraite", "titre": "PLFSS 2027 : le Sénat veut annuler la suspension de la réforme", "texte": "Le budget de la Sécurité sociale n'a pas été adopté par l'Assemblée et est au Sénat depuis le 2 novembre. La commission des affaires sociales propose d'<b>annuler la suspension de la réforme 2023</b> votée l'an dernier, et de revaloriser automatiquement les pensions jusqu'à 1 500 € (contre 1 260 €). Les règles du cumul emploi-retraite changeront au 1<sup>er</sup> janvier 2027."}
+ ],
+ "notion": {
+  "titre": "L'écart de taux OAT–Bund (le « spread »)",
+  "texte": "<p style='margin:2px 0'><b>Définition.</b> C'est la différence entre le taux auquel la France emprunte à 10 ans (OAT) et celui de l'Allemagne (Bund), considérée comme l'emprunteur le plus sûr de la zone euro. Il s'exprime en points de base (1 pb = 0,01 %). Aujourd'hui : 4,77 % − 3,25 % = <b>152 pb</b>. Il était d'environ 50 pb début 2024 : la hausse reflète la crise politique et budgétaire française.</p><p style='margin:2px 0'><b>Pourquoi c'est important pour un client.</b> (1) <i>Crédit</i> : les taux immobiliers suivent l'OAT, donc un écart plus large signifie des emprunts plus chers. (2) <i>Obligations détenues</i> : quand les taux montent, le prix des obligations existantes baisse, ce qui affecte les fonds obligataires et les unités de compte. (3) <i>Fonds euros</i> : à l'inverse, l'assureur réinvestit à des taux plus élevés, ce qui soutient progressivement le rendement servi. Une phrase à retenir en rendez-vous : « le spread mesure la confiance des marchés dans les finances publiques françaises ».</p>"
+ },
+ "sources": [
+  "<a href='https://www.cnbc.com/2026/11/06/oil-price-today-brent-wti.html'>CNBC (pétrole)</a>",
+  "<a href='https://www.cnbc.com/2026/11/05/stock-market-today-live-updates.html'>CNBC (Wall Street)</a>",
+  "<a href='https://www.japantimes.co.jp/business/2026/11/06/markets/market-nov-6/'>Japan Times</a>",
+  "<a href='https://www.federalreserve.gov/monetarypolicy/files/monetary20261028a1.pdf'>Réserve fédérale</a>",
+  "<a href='https://www.bankofengland.co.uk/monetary-policy-report/2026/november-2026'>Banque d'Angleterre</a>",
+  "<a href='https://www.boursorama.com/bourse/actualites/la-bce-laisse-ses-taux-inchanges-christine-lagarde-demissionnera-en-fevrier-4b93d0d00ca65173c613cbd6936af2c2'>Boursorama (BCE)</a>",
+  "<a href='https://www.bloomberg.com/news/articles/2026-10-30/boj-holds-benchmark-rate-steady-as-expected-after-september-hike'>Bloomberg (BoJ)</a>",
+  "<a href='https://www.snb.ch/fr/publications/quarterly-bulletin/2026/quartbul_2026_3_komplett'>BNS</a>",
+  "<a href='https://tradingeconomics.com/china/interest-rate/news/593249'>Trading Economics (PBoC)</a>",
+  "<a href='https://www.journaldunet.com/business/action-publique/1557675-l-assemblee-nationale-rejette-la-partie-recettes-du-budget/'>JDN (budget)</a>",
+  "<a href='https://www.cnbc.com/2026/11/05/france-budget-debt-strikes.html'>CNBC (France)</a>",
+  "<a href='https://www.publicsenat.fr/actualites/politique/mobilisation-contre-la-vie-chere-journee-de-greve-et-manifestations-en-france-qui-sannoncent-tres-suivies'>Public Sénat</a>",
+  "<a href='https://www.senat.fr/lessentiel/plfss2027.pdf'>Sénat (PLFSS 2027)</a>",
+  "<a href='https://www.indy.fr/guide/fiscalite/gestion-financiere/flat-tax-2027/'>Indy (flat tax)</a>",
+  "<a href='https://www.maxey.fr/projet-loi-finances-2027-fiscalite-successions/'>Maxey (successions)</a>",
+  "<a href='https://www.toutsurmesfinances.com/placements/livret-a-ldd-lep-pel-les-taux-des-livrets-d-epargne.html'>Toutsurmesfinances</a>",
+  "<a href='https://www.abcbourse.com/marches/credit-immobilier-voici-les-taux-sur-15-20-et-25-ans-en-novembre-2026_705489'>ABC Bourse (crédit)</a>",
+  "<a href='https://www.boursorama.com/epargne/assurance-vie/actualites/assurance-vie-pourquoi-le-rendement-des-fonds-euros-devrait-grimper-en-2026-63ab24e574e78d74af7db5189c8f5341'>Boursorama (fonds euros)</a>",
+  "<a href='https://www.stocktitan.net/articles/earnings-calendar-week-of-november-9-2026'>Stock Titan (agenda)</a>",
+  "<a href='https://www.aljazeera.com/news/2026/11/2/iran-pushing-accelerated-plan-for-ceasefire-talks-with-us'>Al Jazeera (Iran)</a>"
+ ]
+}
