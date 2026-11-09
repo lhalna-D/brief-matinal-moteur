@@ -25,6 +25,12 @@ Travailler à la racine de ce dépôt (cloné en lecture seule).
    - Patrimoine (4–5 brèves) : fiscalité (PLF/PLFSS, IFI, flat tax, successions, assurance-vie, PER), épargne réglementée
      (Livret A, LEP, PEL), crédit immobilier (baromètres courtiers), placements (fonds euros, SCPI, collecte), retraites.
      Privilégier ce qui a **bougé** ; sinon rappeler brièvement les niveaux en vigueur.
+   - **À lire dans le FT** : ft.com n'est accessible ni à la recherche web ni au réseau de la session (ne pas essayer de
+     contourner). Choisir 3 à 5 **sujets du jour** qui méritent une lecture approfondie (marchés, banques centrales, Europe/France,
+     patrimoine/wealth management) et, pour chacun, construire un lien de recherche FT :
+     `https://www.ft.com/search?q=<mots-clés en anglais encodés URL>&sort=date` (ex. `Bank+of+England+rate+rise`).
+     Si une source citée mentionne un article précis du FT (« according to the Financial Times »), le signaler dans « pourquoi ».
+     L'utilisateur lit les articles avec son accès SKEMA ; ne jamais résumer de contenu payant.
    - Toujours dater les faits ; croiser au moins deux sources pour un chiffre important ; écarter les pages périmées.
 4. **Rédiger `content.json`** (même structure que `exemple_content_2026-11-08.json`) :
    - `date` (= JOUR), `date_label`, `data_note` (ex. « Clôtures du vendredi 6 nov. · devises au 9 nov. 7h »).
@@ -33,6 +39,7 @@ Travailler à la racine de ce dépôt (cloné en lecture seule).
    - `banques_centrales` (6 lignes), `agenda` (3–6 lignes), `monde`, `france`, `patrimoine` (objets `theme`/`titre`/`texte`).
    - `notion` : traiter **la notion donnée par `python3 notion_du_jour.py JOUR`** (une par jour ouvré, liste `notions.txt`),
      en la reliant si possible à l'actualité, en 150–220 mots : définition, chiffres clés, « pourquoi c'est important pour un client ».
+   - `ft` : liste de 3–5 objets `{"titre", "url", "pourquoi"}` : `titre` = le sujet (en français), `url` = la recherche FT, `pourquoi` = une phrase.
    - `sources` : liens HTML `<a href='…'>Nom</a>` vers les articles utilisés.
    - HTML autorisé dans les textes : `<b>`, `<i>`, `<sup>`, `<p>`. Échapper les guillemets JSON.
 5. **PDF** : `python3 render.py data.json content.json "out/Brief Matinal - JOUR.pdf"` (créer `out/`).

@@ -119,6 +119,12 @@ def news(items):
         out.append(f'<div class="news">{tag}<b>{E(it["titre"])}</b> — {it["texte"]}</div>')
     return "".join(out)
 
+def ft_block(items):
+    if not items:
+        return ""
+    lis = "".join(f'<li><a href="{E(it["url"])}"><b>{E(it["titre"])}</b></a> — {it["pourquoi"]}</li>' for it in items)
+    return f'<div class="ft avoid"><h2>À lire dans le FT</h2><ul>{lis}</ul></div>'
+
 CSS = """
 @page { size: A4; margin: 11mm 12mm 12mm 12mm; }
 * { box-sizing: border-box; }
@@ -155,6 +161,9 @@ table.cbt td:nth-child(2) { white-space: nowrap !important; }
 .src { font-size: 6.6pt; color: #898781; margin-top: 8px; border-top: 1px solid #e1e0d9; padding-top: 3px; line-height: 1.3; }
 .src a { color: #898781; text-decoration: none; }
 .avoid { break-inside: avoid; }
+.ft { background: #fff1e5; border-left: 3px solid #990f3d; padding: 4px 10px 5px 8px; border-radius: 3px; margin-top: 8px; }
+.ft h2 { border: 0; margin: 0 0 2px; color: #990f3d; }
+.ft ul { margin: 0; padding-left: 15px; } .ft li { margin: 2px 0; } .ft a { color: #0b0b0b; text-decoration: none; }
 .pb { break-before: page; }
 i, em { font-style: normal; color: #52514e; }
 """
@@ -226,6 +235,7 @@ def build(data, c):
 
 <h2>Monde</h2>{news(c["monde"])}
 <h2>France</h2>{news(c["france"])}
+{ft_block(c.get("ft", []))}
 <h2>Patrimoine · fiscalité · épargne · immobilier · retraite</h2>{news(c["patrimoine"])}
 
 <div class="notion avoid"><h2>Notion du jour · {E(c["notion"]["titre"])}</h2>{c["notion"]["texte"]}</div>
