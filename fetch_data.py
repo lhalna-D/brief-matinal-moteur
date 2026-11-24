@@ -78,24 +78,73 @@ def yahoo(item):
     except Exception as e:
         return dict(group=group, label=label, ticker=tk, error=str(e)[:200])
 
-BONDS = {"USGG10YR": "États-Unis", "GDBR10": "Allemagne", "GFRN10": "France",
-         "GBTPGR10": "Italie", "GSPG10YR": "Espagne", "GUKG10": "Royaume-Uni",
-         "GJGB10": "Japon", "GSWISS10": "Suisse", "GCNY10YR": "Chine"}
+# Taux souverains à 10 ans.
+# Source principale : pages pays de Trading Economics (phrase datée de la meta description).
+# Secours : Boursorama (tableau « 10 ans » de /bourse/taux/), parfois en retard de plusieurs jours.
+# (Le tableau https://tradingeconomics.com/bonds est désormais chargé en JavaScript : inutilisable.)
+BONDS = {  # pays -> (code ISO Boursorama, slug Trading Economics)
+    "États-Unis": ("USA", "united-states"), "Allemagne": ("DEU", "germany"), "France": ("FRA", "france"),
+    "Italie": ("ITA", "italy"), "Espagne": ("ESP", "spain"), "Royaume-Uni": ("GBR", "united-kingdom"),
+    "Japon": ("JPN", "japan"), "Suisse": ("CHE", "switzerland"), "Chine": ("CHN", "china"),
+}
+
+def _num(x):
+    return float(x.replace("\u202f", "").replace(" ", "").replace(",", "."))
+
+def bonds_boursorama():
+    h = get("https://www.boursorama.com/bourse/taux/")
+    iso = {v[0]: k for k, v in BONDS.items()}
+    out = {}
+    for code, y, bp in re.findall(r'title="([A-Z]{3}) BENCHMARK 10A"[^>]*>\s*([\-\d,]+)%</a>\s*</td>\s*<td[^>]*>\s*([\-+\d,]+) BP', h):
+        if code in iso and iso[code] not in out:
+            out[iso[code]] = dict(y=_num(y), d1_bp=_num(bp), date="", src="Boursorama")
+    return out
+
+def bond_te(slug):
+    h = get(f"https://tradingeconomics.com/{slug}/government-bond-yield")
+    m = re.search(r'name="description" content="([^"]+)"', h) or re.search(r'id="metaDesc"[^>]*content="([^"]+)"', h)
+    if not m:
+        return None
+    d = m.group(1)
+    y = re.search(r'Yield (?:\w+ ){0,3}?(?:to |at )([\d.]+)%', d)
+    if not y:
+        return None
+    chg = re.search(r'a ([\d.]+) percentage points? (increase|decrease)', d)
+    bp = None
+    if chg:
+        bp = float(chg.group(1)) * 100 * (1 if chg.group(2) == "increase" else -1)
+    elif "held steady" in d:
+        bp = 0.0
+    date = re.search(r' on ([A-Z][a-z]+ \d{1,2}, \d{4})', d)
+    return dict(y=float(y.group(1)), d1_bp=None if bp is None else round(bp, 1), date=date.group(1) if date else "", src="Trading Economics")
 
 def bonds():
-    h = get("https://tradingeconomics.com/bonds")
+    """Source principale : pages pays Trading Economics (datées, cohérentes avec Yahoo/FRED).
+    Secours : Boursorama (parfois en retard de plusieurs jours, d'où la mention « secours »)."""
     out = {}
-    for tr in re.findall(r'<tr data-symbol="(.*?)</tr>', h, re.S):
-        sym = tr.split(":")[0]
-        if sym not in BONDS or BONDS[sym] in out:
-            continue
-        p = re.search(r'id="p" class="datatable-item">\s*([\-\d\.]+)', tr)
-        vals = re.findall(r'data-value="([\-\d\.]+)"', tr)
-        date = re.search(r'id="date"[^>]*>\s*([^<]+?)\s*<', tr)
-        if p:
-            out[BONDS[sym]] = dict(y=float(p.group(1)), d1_bp=float(vals[0]) * 100 if vals else None,
-                                   date=date.group(1) if date else "")
-    return out
+    def one(item):
+        pays, (_, slug) = item
+        try:
+            return pays, bond_te(slug)
+        except Exception as e:
+            print("Trading Economics indisponible pour", pays, ":", str(e)[:120])
+            return pays, None
+    with ThreadPoolExecutor(3) as ex:
+        for pays, r in ex.map(one, BONDS.items()):
+            if r:
+                out[pays] = r
+    if len(out) < len(BONDS):
+        try:
+            for pays, r in bonds_boursorama().items():
+                if pays not in out:
+                    r["src"] = "Boursorama (secours, peut être en retard)"
+                    out[pays] = r
+        except Exception as e:
+            print("Boursorama indisponible :", str(e)[:120])
+    manquants = [p for p in BONDS if p not in out]
+    if manquants:
+        print("ATTENTION taux 10 ans manquants :", ", ".join(manquants))
+    return {p: out[p] for p in BONDS if p in out}
 
 def ecb():
     res = {}

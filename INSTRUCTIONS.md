@@ -14,7 +14,8 @@ Travailler à la racine de ce dépôt (cloné en lecture seule).
 
 1. **Date du jour** : `TZ=Europe/Paris date +%F` → `JOUR`. Libellé du type « Lundi 9 novembre 2026 ».
 2. **Données de marché** : `python3 fetch_data.py data.json` (Yahoo Finance, Trading Economics, BCE).
-   Vérifier la sortie : toute ligne `ERREUR` ou donnée manifestement aberrante doit être signalée dans le texte,
+   Vérifier la sortie : toute ligne `ERREUR` ou `ATTENTION taux 10 ans manquants`, ou un champ `bonds` vide ou marqué
+   « secours » (Boursorama, parfois en retard), doit être signalé dans `taux_commentaire`. Toute ligne `ERREUR` ou donnée manifestement aberrante doit être signalée dans le texte,
    jamais inventée. Le tableau marque automatiquement les cotations de plus de 5 jours (« au JJ/MM »).
 3. **Recherches web** (WebSearch, privilégier `extended` pour l'actualité des dernières 24 h) — couvrir :
    - Explications des mouvements de marché de la veille (Europe, Wall Street) et de la nuit en Asie.
