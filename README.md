@@ -8,5 +8,6 @@ planifiée Claude Code, dans une session neuve qui clone ce dépôt public en le
 - `upload.py` + `apps_script_depot_drive.gs` : dépôt dans Google Drive via une Apps Script
 - `notions.txt` + `notion_du_jour.py` : notion pédagogique du jour
 - `INSTRUCTIONS.md` : procédure suivie chaque matin
+- `CONTEXTE.md` : récapitulatif du projet, à lire pour reprendre dans une nouvelle conversation
 
 Aucun secret n'est stocké ici : l'URL de l'Apps Script et son mot de passe sont fournis par la tâche planifiée.
